@@ -2,20 +2,14 @@ import React, { useState } from 'react';
 import Character from "./components/Character"
 import './App.css';
 import Axios from 'axios';
+import {BASE_URL} from './Constants'
 
 const App = () => {
-  const [baseUrl] = useState("https://rickandmortyapi.com/api/character/")
-
-  const [characters, setCharacters] = useState([
-    {
-      image: "https://rickandmortyapi.com/api/character/avatar/6.jpeg",
-      name: "Abandango Cluster"
-    }
-  ])
+  const [characters, setCharacters] = useState([])
 
   useState(() => {
 
-    Axios.get(baseUrl)
+    Axios.get(BASE_URL)
       .then((info) => {
         // console.log(info)
         setCharacters(info.data.results)
@@ -23,7 +17,7 @@ const App = () => {
       .catch((err) => {
         console.log("there is an error", err)
       })
-  }, [])
+  },[])
 
     return (
       <div className="App">

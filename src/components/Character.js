@@ -1,14 +1,57 @@
 import React from "react";
+import styled, {keyframes} from 'styled-components'
+
+const kf = keyframes`
+    100% {
+    opacity: 1;
+}
+`
+const StyledFriend = styled.div`
+    animation: ${kf} 0.5s ease-in-out forwards;
+    color: ${pr => pr.danger ? pr.theme.dangerColor : pr.theme.primaryColor};
+    font-weight: bold;
+    width: 100%;
+    /* display: flex;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+    align-content: center; */
+    &:hover {
+        color: ${pr => pr.theme.secondaryColor};
+        transition: all 0.5s ease-in-out;
+    }
+    transition: all 0.5s ease-in-out;
+`
+const StyledP = styled.p`
+    animation: ${kf} 0.5s ease-in-out forwards;
+    color: blueviolet;
+    font-weight: bold;
+    margin: 3%;
+    &:hover {
+        color: ${pr => pr.theme.secondaryColor};
+        transition: all 0.5s ease-in-out;
+    }
+    transition: all 0.5s ease-in-out;
+`
+const StyledImg = styled.img`
+    border-radius: 12%;
+    margin: 5%;
+    &:hover{
+        box-shadow: 5px 5px 37px 28px rgba(0,0,0,0.75);
+        transition: all 0.5s ease-in-out;
+    }
+    transition: all 0.5s ease-in-out;
+`
 
 const Character = (props) => {
 
     console.log(props)
 
     return (
-        <div>
-            <img src={props.character.image} alt={props.character.name} />
-            <h2>{props.character.name} is {props.character.gender} they are a/an {props.character.species} they are currently {props.character.status} </h2>
-        </div>
+        <StyledFriend>
+            <h2>{props.character.name}</h2>
+            <StyledImg src={props.character.image} alt={props.character.name} />
+            <StyledP> They are {props.character.gender} they are a/an {props.character.species} they are currently {props.character.status} </StyledP>
+        </StyledFriend>
         
     );
 
