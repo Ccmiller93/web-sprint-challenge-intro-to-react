@@ -1,34 +1,17 @@
-// Write your Character component here
-import React, { useState, useEffect } from 'react'
-import { BASE_URL, API_KEY } from '../Constants'
-import axios from 'axios'
+import React from "react";
 
-export default function Details(props) {
-const [details, setDetails] = useState(null)
+const Character = (props) => {
 
-useEffect(() => {
-axios.get(`${BASE_URL}${API_KEY}232`)
-    .then(res => { setDetails(res.data) })
-    .catch(err => { debugger }) // eslint-disable-line
-}, [])
-// useEffect(() => {
-//     axios.get(`${BASE_URL}${API_KEY}230`)
-//         .then(res => { setDetails(res.data) })
-//         .catch(err => { debugger }) // eslint-disable-line
-//     }, [])
-    
-return (
-<div className='container'>
-    <h2>Character:</h2>
-    {
-    details &&
-    <>
-                <img src={details.image} alt='Name'/>
-                <h2>{details.name} is {details.gender} they are a {details.species} they are currently {details.status} </h2>
+    console.log(props)
+
+    return (
+        <div>
+            <img src={props.character.image} alt={props.character.name} />
+            <h2>{props.character.name} is {props.character.gender} they are a/an {props.character.species} they are currently {props.character.status} </h2>
+        </div>
         
-    </>
-    }
-    {/* <button onClick={close}>Close</button> */}
-</div>
-)
+    );
+
 }
+
+export default Character 

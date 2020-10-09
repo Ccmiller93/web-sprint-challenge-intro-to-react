@@ -4,5 +4,22 @@
 .Header {
   color: #443e3e;
   text-shadow: 1px 1px 5px #fff;
-}
+
 /* write your parent styles in here for your App.js */
+font-family: 'Space Mono', mono space;
+font-size: 60px;
+color: black;
+border-style: dashed;
+border: 5px;
+
+}
+h1:hover {
+color: purple;
+transition: 3s;
+
+
+}
+
+image  {
+
+}
