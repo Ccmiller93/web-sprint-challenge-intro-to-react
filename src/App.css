@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background: grey;
+  background: lightslategrey;
   justify-content: center;
 }
 .Header {
@@ -12,7 +12,7 @@
 font-family: 'Space Mono', mono space;
 font-size: 60px;
 color: green;
-border: 5px;
+
 
 }
 h1:hover {

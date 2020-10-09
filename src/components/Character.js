@@ -25,7 +25,7 @@ const StyledP = styled.p`
     animation: ${kf} 0.5s ease-in-out forwards;
     color: blueviolet;
     font-weight: bold;
-    margin: 3%;
+    margin: 2% 0% 2% 0%;
     &:hover {
         color: ${pr => pr.theme.secondaryColor};
         transition: all 0.5s ease-in-out;
@@ -34,12 +34,15 @@ const StyledP = styled.p`
 `
 const StyledImg = styled.img`
     border-radius: 12%;
-    margin: 5%;
+    margin: 2% 0%;
     &:hover{
         box-shadow: 5px 5px 37px 28px rgba(0,0,0,0.75);
         transition: all 0.5s ease-in-out;
     }
     transition: all 0.5s ease-in-out;
+`
+const StyledH2 = styled.h2`
+    padding: 2% 0% 2% 0%;
 `
 
 const Character = (props) => {
@@ -48,7 +51,7 @@ const Character = (props) => {
 
     return (
         <StyledFriend>
-            <h2>{props.character.name}</h2>
+            <StyledH2>{props.character.name}</StyledH2>
             <StyledImg src={props.character.image} alt={props.character.name} />
             <StyledP> They are {props.character.gender} they are a/an {props.character.species} they are currently {props.character.status} </StyledP>
         </StyledFriend>
