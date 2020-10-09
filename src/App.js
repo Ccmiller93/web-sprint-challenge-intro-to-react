@@ -1,5 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios'
 import './App.css';
+import {API_KEY, BASE_URL} from './Constants'
+import Details from './components/Character'
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -12,6 +15,7 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">Characters</h1>
+      <Details></Details>
     </div>
   );
 }

@@ -30,11 +30,19 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
-1. Describe component state.
+It is a library that simplifies the creation of UI using components
 
-1. Describe props.
+2. Describe component state.
 
-1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+the data that that renders a component when changed 
+
+3. Describe props.
+
+how data is passed down from parents to children 
+
+4. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+
+they happen outside the current function, you sync with dependencies 
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
